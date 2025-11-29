@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { supabase } from './supabaseClient'
-import type { MenuItem, Order, OrderItem } from './types'
+import type { MenuItem, Order } from './types'
 
 export function useMenu(canteenId?: number, showUnavailable = false) {
   return useQuery({

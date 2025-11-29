@@ -79,7 +79,7 @@ async function generateTokenForOrder(orderId: number, canteenId: number | null |
   return null
 }
 
-async function updateStatus(id: number, status: Row['status'], currentOrder?: any) {
+async function updateStatus(id: number, status: Row['status'], currentOrder?: any, adminCanteenId?: number) {
   try {
     // Get admin session for authentication
     const { data: sessionData } = await supabase.auth.getSession()
